@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0b5607f-4be4-4d67-9c26-f28127210cf2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Midterm/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Midterm/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Midterm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Midterm/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player_Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player_Movement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player_Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player_Movement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,31 +20,33 @@
     <session id="-740191471">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="1340" />
+          <entry key="cs" value="5704" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="1340" />
+          <entry key="C#" value="5704" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="4" />
+          <entry key="cs" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="4" />
+          <entry key="C#" value="9" />
         </counts>
       </usages-collector>
     </session>
@@ -49,46 +54,67 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player_Movement.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+            <state relative-caret-position="330">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
               <folding>
-                <marker date="1538081338399" expanded="false" signature="6:78" ph="..." />
-                <marker date="1538081338399" expanded="true" signature="124:2705" ph="{...}" />
-                <marker date="1538081338399" expanded="true" signature="379:593" ph="{...}" />
-                <marker date="1538081338399" expanded="true" signature="612:744" ph="{...}" />
-                <marker date="1538081338399" expanded="true" signature="780:990" ph="{...}" />
-                <marker date="1538081338399" expanded="true" signature="1022:1609" ph="{...}" />
-                <marker date="1538081338399" expanded="true" signature="1094:1470" ph="{...}" />
-                <marker date="1538081338399" expanded="true" signature="1272:1460" ph="{...}" />
-                <marker date="1538081338399" expanded="true" signature="1351:1446" ph="{...}" />
-                <marker date="1538081338399" expanded="true" signature="1552:1603" ph="{...}" />
-                <marker date="1538081338399" expanded="true" signature="1644:2271" ph="{...}" />
-                <marker date="1538081338399" expanded="true" signature="1682:2265" ph="{...}" />
-                <marker date="1538081338399" expanded="true" signature="1976:2109" ph="/* Vector3 spawnPos = new Vector3(playerPos.x+0.5f, playerPos.y, playerPos.z+1); ... */" />
-                <marker date="1538081338399" expanded="true" signature="2310:2620" ph="{...}" />
-                <marker date="1538081338399" expanded="true" signature="2656:2703" ph="{...}" />
+                <marker date="1539221410953" expanded="false" signature="6:141" ph="..." />
+                <marker date="1539221410953" expanded="true" signature="189:5203" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="196:412" ph="/* This script is attached to the player. ... */" />
+                <marker date="1539221410953" expanded="true" signature="798:915" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="942:1058" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="1183:1617" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="1753:3540" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="1929:2646" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="2001:2636" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="2348:2443" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="2522:2622" ph="/* else if (holdObject.CompareTag(&quot;Tool&quot;)) ... */" />
+                <marker date="1539221410953" expanded="true" signature="2656:2734" ph="/* RIGHT CLICK ... */" />
+                <marker date="1539221410953" expanded="true" signature="2830:3243" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="2902:3233" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="3046:3219" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="3474:3525" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="3696:4704" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="3734:4590" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="4108:4234" ph="/* Vector3 spawnPos = new Vector3(playerPos.x+0.5f, playerPos.y, playerPos.z+1); ... */" />
+                <marker date="1539221410953" expanded="true" signature="4603:4698" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="4821:5075" ph="{...}" />
+                <marker date="1539221410953" expanded="true" signature="5154:5201" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Classwork_04/Assets/Player_Movement.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Item_all.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="52" selection-start-line="52" selection-end-line="56" selection-end-column="5" />
+            <state relative-caret-position="300">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
               <folding>
-                <marker date="1537907443705" expanded="false" signature="6:92" ph="..." />
-                <marker date="1537907443705" expanded="true" signature="138:1367" ph="{...}" />
-                <marker date="1537907443705" expanded="true" signature="305:362" ph="{...}" />
-                <marker date="1537907443705" expanded="true" signature="381:446" ph="{...}" />
-                <marker date="1537907443705" expanded="true" signature="482:831" ph="{...}" />
-                <marker date="1537907443705" expanded="true" signature="596:723" ph="/* Rotations: ... */" />
-                <marker date="1537907443705" expanded="true" signature="866:1176" ph="{...}" />
-                <marker date="1537907443705" expanded="true" signature="1182:1260" ph="/* it runs every &quot;physics step/frame&quot; ... */" />
-                <marker date="1537907443705" expanded="true" signature="1291:1365" ph="{...}" />
+                <marker date="1539221410966" expanded="true" signature="6:92" ph="..." />
+                <marker date="1539221410966" expanded="true" signature="131:697" ph="{...}" />
+                <marker date="1539221410966" expanded="true" signature="138:606" ph="/* This script gets attached to every holdable item ... */" />
+                <marker date="1539221410966" expanded="true" signature="661:695" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Food.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <folding>
+                <marker date="1539221410940" expanded="false" signature="6:78" ph="..." />
+                <marker date="1539221410940" expanded="true" signature="113:1058" ph="{...}" />
+                <marker date="1539221410940" expanded="true" signature="117:293" ph="/* This script is attached to any &quot;choppable&quot; food objects the player interacts with. ... */" />
+                <marker date="1539221410940" expanded="true" signature="358:564" ph="/* This &quot;chops&quot; the current food (gameobject) by instantiating a certain number of objects in its place and then  ... */" />
+                <marker date="1539221410940" expanded="true" signature="584:677" ph="{...}" />
+                <marker date="1539221410940" expanded="true" signature="682:884" ph="/* This just iterates through a for loop for &quot;amount&quot; number of times, instantiating a new object each time. ... */" />
+                <marker date="1539221410940" expanded="true" signature="928:1056" ph="{...}" />
+                <marker date="1539221410940" expanded="true" signature="966:1053" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -100,14 +126,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player_Movement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Classwork_04/Assets/Player_Movement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item_all.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Food.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Player_Move.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/sda.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player_Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Food_Abstract.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bread.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Food.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Item_all.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" />
       </list>
     </option>
   </component>
@@ -129,11 +163,11 @@
     </navigator>
     <panes>
       <pane id="FileSystemExplorer" />
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
       </pane>
     </panes>
   </component>
@@ -185,11 +219,14 @@
       <workItem from="1538076296585" duration="32000" />
       <workItem from="1538076457910" duration="476000" />
       <workItem from="1538076965759" duration="4387000" />
+      <workItem from="1538675885391" duration="571000" />
+      <workItem from="1538678305429" duration="7664000" />
+      <workItem from="1539216525336" duration="3917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4895000" />
+    <option name="totallyTimeSpent" value="17047000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -202,8 +239,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2671141" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -251,42 +289,71 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player_Move.cs" />
     <entry file="file://$PROJECT_DIR$/../Classwork_04/Assets/Player_Movement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="52" selection-start-line="52" selection-end-line="56" selection-end-column="5" />
+        <state relative-caret-position="125">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/sda.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Food_Abstract.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Bread.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Food.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           <folding>
-            <marker date="1537907443705" expanded="false" signature="6:92" ph="..." />
-            <marker date="1537907443705" expanded="true" signature="138:1367" ph="{...}" />
-            <marker date="1537907443705" expanded="true" signature="305:362" ph="{...}" />
-            <marker date="1537907443705" expanded="true" signature="381:446" ph="{...}" />
-            <marker date="1537907443705" expanded="true" signature="482:831" ph="{...}" />
-            <marker date="1537907443705" expanded="true" signature="596:723" ph="/* Rotations: ... */" />
-            <marker date="1537907443705" expanded="true" signature="866:1176" ph="{...}" />
-            <marker date="1537907443705" expanded="true" signature="1182:1260" ph="/* it runs every &quot;physics step/frame&quot; ... */" />
-            <marker date="1537907443705" expanded="true" signature="1291:1365" ph="{...}" />
+            <marker date="1539221410940" expanded="false" signature="6:78" ph="..." />
+            <marker date="1539221410940" expanded="true" signature="113:1058" ph="{...}" />
+            <marker date="1539221410940" expanded="true" signature="117:293" ph="/* This script is attached to any &quot;choppable&quot; food objects the player interacts with. ... */" />
+            <marker date="1539221410940" expanded="true" signature="358:564" ph="/* This &quot;chops&quot; the current food (gameobject) by instantiating a certain number of objects in its place and then  ... */" />
+            <marker date="1539221410940" expanded="true" signature="584:677" ph="{...}" />
+            <marker date="1539221410940" expanded="true" signature="682:884" ph="/* This just iterates through a for loop for &quot;amount&quot; number of times, instantiating a new object each time. ... */" />
+            <marker date="1539221410940" expanded="true" signature="928:1056" ph="{...}" />
+            <marker date="1539221410940" expanded="true" signature="966:1053" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player_Movement.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Item_all.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+        <state relative-caret-position="300">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding>
-            <marker date="1538081338399" expanded="false" signature="6:78" ph="..." />
-            <marker date="1538081338399" expanded="true" signature="124:2705" ph="{...}" />
-            <marker date="1538081338399" expanded="true" signature="379:593" ph="{...}" />
-            <marker date="1538081338399" expanded="true" signature="612:744" ph="{...}" />
-            <marker date="1538081338399" expanded="true" signature="780:990" ph="{...}" />
-            <marker date="1538081338399" expanded="true" signature="1022:1609" ph="{...}" />
-            <marker date="1538081338399" expanded="true" signature="1094:1470" ph="{...}" />
-            <marker date="1538081338399" expanded="true" signature="1272:1460" ph="{...}" />
-            <marker date="1538081338399" expanded="true" signature="1351:1446" ph="{...}" />
-            <marker date="1538081338399" expanded="true" signature="1552:1603" ph="{...}" />
-            <marker date="1538081338399" expanded="true" signature="1644:2271" ph="{...}" />
-            <marker date="1538081338399" expanded="true" signature="1682:2265" ph="{...}" />
-            <marker date="1538081338399" expanded="true" signature="1976:2109" ph="/* Vector3 spawnPos = new Vector3(playerPos.x+0.5f, playerPos.y, playerPos.z+1); ... */" />
-            <marker date="1538081338399" expanded="true" signature="2310:2620" ph="{...}" />
-            <marker date="1538081338399" expanded="true" signature="2656:2703" ph="{...}" />
+            <marker date="1539221410966" expanded="true" signature="6:92" ph="..." />
+            <marker date="1539221410966" expanded="true" signature="131:697" ph="{...}" />
+            <marker date="1539221410966" expanded="true" signature="138:606" ph="/* This script gets attached to every holdable item ... */" />
+            <marker date="1539221410966" expanded="true" signature="661:695" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding>
+            <marker date="1539221410953" expanded="false" signature="6:141" ph="..." />
+            <marker date="1539221410953" expanded="true" signature="189:5203" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="196:412" ph="/* This script is attached to the player. ... */" />
+            <marker date="1539221410953" expanded="true" signature="798:915" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="942:1058" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="1183:1617" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="1753:3540" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="1929:2646" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="2001:2636" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="2348:2443" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="2522:2622" ph="/* else if (holdObject.CompareTag(&quot;Tool&quot;)) ... */" />
+            <marker date="1539221410953" expanded="true" signature="2656:2734" ph="/* RIGHT CLICK ... */" />
+            <marker date="1539221410953" expanded="true" signature="2830:3243" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="2902:3233" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="3046:3219" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="3474:3525" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="3696:4704" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="3734:4590" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="4108:4234" ph="/* Vector3 spawnPos = new Vector3(playerPos.x+0.5f, playerPos.y, playerPos.z+1); ... */" />
+            <marker date="1539221410953" expanded="true" signature="4603:4698" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="4821:5075" ph="{...}" />
+            <marker date="1539221410953" expanded="true" signature="5154:5201" ph="{...}" />
           </folding>
         </state>
       </provider>
