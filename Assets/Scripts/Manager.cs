@@ -9,7 +9,7 @@ public class Manager : MonoBehaviour {
     public void Quit()
     {
         // If in editor
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
 
         // game
         Application.Quit();
