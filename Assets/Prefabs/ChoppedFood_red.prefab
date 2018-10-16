@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65247398614452016}
   - component: {fileID: 54765083947000026}
   - component: {fileID: 114367251034099496}
+  - component: {fileID: 114492706098969922}
   m_Layer: 0
   m_Name: ChoppedFood_red
   m_TagString: ChoppedFood
@@ -125,3 +126,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Title: Chopped Red Food
+--- !u!114 &114492706098969922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1082915774518880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9dae9a453fefd4f92df236678ad868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

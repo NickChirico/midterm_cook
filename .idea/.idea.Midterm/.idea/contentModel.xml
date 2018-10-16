@@ -11,6 +11,8 @@
           <e p="Food.cs" t="Include" />
           <e p="Item_all.cs" t="Include" />
           <e p="Player_Controller.cs" t="Include" />
+          <e p="Pot.cs" t="Include" />
+          <e p="PreparedFood.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

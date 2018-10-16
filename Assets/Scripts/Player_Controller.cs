@@ -9,11 +9,11 @@ public class Player_Controller : MonoBehaviour
     // This script is attached to the player. 
     // This class contains the majority of the code in this game. 
     // It manages the player's movement/look, clicking interactivity, and holding/carrying objects around.
-    
+
     public float ClickDistance;
     public float HozSensitivity;
     public float VertSensitivity;
-    public Text Label;
+    public Text Label; 
     public Image LabelBackground;
 
     private Rigidbody rb;
@@ -29,6 +29,7 @@ public class Player_Controller : MonoBehaviour
         cam = Camera.main;
 
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
@@ -39,18 +40,19 @@ public class Player_Controller : MonoBehaviour
 
 
         UpdateMovement();
+
     }
 
     // This method manages mouse look and rotation. It is called from Update each frame.
     private void UpdateMouseLook()
     {
+
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
 
         transform.Rotate(0f, mouseX * HozSensitivity, 0f);
         cam.transform.Rotate((mouseY * VertSensitivity) * -1, 0f, 0f);
 
-        Cursor.lockState = CursorLockMode.Locked;
         //transform.LookAt(cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane)), Vector3.up);
     }
 

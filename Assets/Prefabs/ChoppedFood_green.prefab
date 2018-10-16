@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65784947535145914}
   - component: {fileID: 54673684800339860}
   - component: {fileID: 114045881451986320}
+  - component: {fileID: 114910359510585724}
   m_Layer: 0
   m_Name: ChoppedFood_green
   m_TagString: ChoppedFood
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1435780248365826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.7837687, y: 0.1037883, z: -3.88258}
+  m_LocalPosition: {x: 9.203559, y: 0.78, z: -0.33164856}
   m_LocalScale: {x: 0.20757663, y: 0.20757663, z: 0.20757663}
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,3 +126,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Title: Chopped Green Food
+--- !u!114 &114910359510585724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1435780248365826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9dae9a453fefd4f92df236678ad868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
