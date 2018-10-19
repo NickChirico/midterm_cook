@@ -8,6 +8,7 @@ TagManager:
   - Tool
   - ChoppedFood
   - Pot
+  - Button
   layers:
   - Default
   - TransparentFX

@@ -28,7 +28,7 @@ public class Food : MonoBehaviour
 	{
 		for (int i = 0; i < amount; i++)
 		{
-			Instantiate(ChoppedFood, this.transform.position, this.transform.rotation);
+            Instantiate(ChoppedFood, this.transform.position, this.transform.rotation);
 		}
 	}
 }

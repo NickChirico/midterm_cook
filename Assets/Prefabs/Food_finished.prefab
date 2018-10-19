@@ -125,8 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1423e3973fc7e4c888a8e2dda7d549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChoppedFood: {fileID: 1435780248365826, guid: d8fa3e6e9045fc046ac5e72773887910,
-    type: 2}
+  ChoppedFood: {fileID: 0}
   ChopAmount: 2
 --- !u!114 &114662353111334486
 MonoBehaviour:

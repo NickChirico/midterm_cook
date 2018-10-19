@@ -15,6 +15,12 @@ public class Player_Controller : MonoBehaviour
     public float VertSensitivity;
     public Text Label; 
     public Image LabelBackground;
+    public GameObject RecipePanel;
+    public GameObject Crosshair;
+    public GameObject Crosshair_knife;
+    public GameObject Knife_label;
+
+    public bool CanMove = false;
 
     private Rigidbody rb;
     private Camera cam;
@@ -22,26 +28,42 @@ public class Player_Controller : MonoBehaviour
     private Vector3 holdObjectLocation;
     private float WalkSpeed = 4;
     private Vector3 InputVector;
+    private float verticalLook;
+
+    private Pot pot;
+    private AudioSource chopSound;
 
     private void Start()
     {
         rb = this.GetComponent<Rigidbody>();
         cam = Camera.main;
+ 
+        pot = FindObjectOfType<Pot>();
 
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        Knife_label.SetActive(false);
+
+        chopSound = this.GetComponent<AudioSource>();
     }
 
     private void Update()
     {
-        UpdateMouseLook();
-        UpdateClick();
-        ManageHoldItem();
+        if (CanMove)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
 
+            UpdateMouseLook();
+            UpdateClick();
+            ManageHoldItem();
 
-        UpdateMovement();
-
-    }
+            UpdateMovement();
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+     }
 
     // This method manages mouse look and rotation. It is called from Update each frame.
     private void UpdateMouseLook()
@@ -50,8 +72,12 @@ public class Player_Controller : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
 
-        transform.Rotate(0f, mouseX * HozSensitivity, 0f);
-        cam.transform.Rotate((mouseY * VertSensitivity) * -1, 0f, 0f);
+        verticalLook += -mouseY;
+        verticalLook = Mathf.Clamp(verticalLook, -80f, 80f);
+
+        transform.Rotate(0f, mouseX, 0f);
+        cam.transform.localEulerAngles = new Vector3(verticalLook,0f,0f);
+
 
         //transform.LookAt(cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane)), Vector3.up);
     }
@@ -61,23 +87,32 @@ public class Player_Controller : MonoBehaviour
     {
         RaycastHit hit;
         var ray = new Ray(cam.transform.position, cam.transform.forward);
-        
+
         // LEFT CLICK
         if (Input.GetMouseButtonDown(0))
         {
             if (Physics.Raycast(ray, out hit, ClickDistance))
             {
-                // If you click on an object ("Item" or "Tool") and you are not currently holding an object, pick it up. 
-                if ((hit.transform.gameObject.CompareTag("Item") || hit.transform.gameObject.CompareTag("Tool") ||
-                     hit.transform.gameObject.CompareTag("ChoppedFood")) && holdObject == null)
+                if (holdObject == null)
                 {
-                    holdObject = hit.transform.gameObject;
+                    // If you click on an object ("Item" or "Tool") and you are not currently holding an object, pick it up. 
+                    if ((hit.transform.gameObject.CompareTag("Item") || hit.transform.gameObject.CompareTag("Tool") ||
+                         hit.transform.gameObject.CompareTag("ChoppedFood")) && holdObject == null)
+                    {
+                        holdObject = hit.transform.gameObject;
+                    }
+
+                    if (hit.transform.gameObject.CompareTag("Button"))
+                    {
+                        //Debug.Log("Clicked BUTTON");
+                        pot.Cook();
+                    }
                 }
-                // If you click while holding a "Tool" object
-                /*else if (holdObject.CompareTag("Tool"))
+                else if (holdObject != null)
                 {
-                    
-                }*/
+                    holdObject = null;
+                }
+
             }
         }
 
@@ -92,16 +127,10 @@ public class Player_Controller : MonoBehaviour
                 {
                     // Call the "Item" (the food's) CHOP method
                     hit.transform.gameObject.SendMessageUpwards("Chop");
+                    chopSound.Play();
                 }
             }
-        }
-        
-        // When you let go of an item your holding, drop the item
-        if (Input.GetMouseButtonUp(0) && holdObject != null) //&&(holdObject.CompareTag("Item") || holdObject.CompareTag("ChoppedFood")))                  
-        {
-            holdObject = null;
-        }
-        
+        }       
     }
 
     // This method determines and manages what object you are currently holding, if any. Called from Update each frame. 
@@ -110,9 +139,9 @@ public class Player_Controller : MonoBehaviour
         if (holdObject != null)
         {
             Vector3 camPos = new Vector3(cam.transform.position.x, cam.transform.position.y - 0.4f,
-                cam.transform.position.z);
+               cam.transform.position.z);
             //Vector3 holdPos = new Vector3(transform.forward.x + 0.5f, transform.forward.y, transform.forward.z;
-            holdObjectLocation = camPos + transform.forward * 1.4f + transform.right * 0.5f;
+            holdObjectLocation = camPos + transform.forward * 1f + transform.right * 0.4f;
 
             //Vector3 spawnPos = new Vector3(playerPos.x+0.5f, playerPos.y, playerPos.z+1);
 
@@ -127,8 +156,22 @@ public class Player_Controller : MonoBehaviour
         }
         else
         {
-            Label.text = "Empty";
+            Label.text = "";
             //labelBack.enabled = false;
+        }
+
+        // Updates the crosshair (if you're holding the knife)
+        if (holdObject != null && holdObject.CompareTag("Tool"))
+        {
+            Crosshair.SetActive(false);
+            Crosshair_knife.SetActive(true);
+            Knife_label.SetActive(true);
+        }
+        else
+        {
+            Crosshair_knife.SetActive(false);
+            Crosshair.SetActive(true);
+            Knife_label.SetActive(false);
         }
     }
 
